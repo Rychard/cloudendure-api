@@ -33,7 +33,7 @@ namespace CloudEndure.Model
         /// <param name="isProtected">Is this disk currently being replicated by CloudEndure. (required).</param>
         /// <param name="name">name (required).</param>
         /// <param name="size">Disk size (in Bytes)..</param>
-        public MachineSourcePropertiesDisks(bool? isProtected = default(bool?), string name = default(string), int? size = default(int?))
+        public MachineSourcePropertiesDisks(bool? isProtected = default(bool?), string name = default(string), long? size = default(int?))
         {
             // to ensure "isProtected" is required (not null)
             if (isProtected == null)
@@ -74,7 +74,7 @@ namespace CloudEndure.Model
         /// </summary>
         /// <value>Disk size (in Bytes).</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
-        public int? Size { get; set; }
+        public long? Size { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

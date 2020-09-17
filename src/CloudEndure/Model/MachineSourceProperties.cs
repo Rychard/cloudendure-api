@@ -40,7 +40,7 @@ namespace CloudEndure.Model
         /// <param name="cpu">Identified CPUs..</param>
         /// <param name="runningServices">runningServices.</param>
         /// <param name="machineCloudId">Machine ID in the source environment..</param>
-        public MachineSourceProperties(string name = default(string), MachineSourcePropertiesInstalledApplications installedApplications = default(MachineSourcePropertiesInstalledApplications), List<MachineSourcePropertiesDisks> disks = default(List<MachineSourcePropertiesDisks>), string machineCloudState = default(string), List<string> publicIps = default(List<string>), int? memory = default(int?), string os = default(string), List<MachineSourcePropertiesCpu> cpu = default(List<MachineSourcePropertiesCpu>), MachineSourcePropertiesRunningServices runningServices = default(MachineSourcePropertiesRunningServices), string machineCloudId = default(string))
+        public MachineSourceProperties(string name = default(string), MachineSourcePropertiesInstalledApplications installedApplications = default(MachineSourcePropertiesInstalledApplications), List<MachineSourcePropertiesDisks> disks = default(List<MachineSourcePropertiesDisks>), string machineCloudState = default(string), List<string> publicIps = default(List<string>), long? memory = default(int?), string os = default(string), List<MachineSourcePropertiesCpu> cpu = default(List<MachineSourcePropertiesCpu>), MachineSourcePropertiesRunningServices runningServices = default(MachineSourcePropertiesRunningServices), string machineCloudId = default(string))
         {
             this.Name = name;
             this.InstalledApplications = installedApplications;
@@ -93,7 +93,7 @@ namespace CloudEndure.Model
         /// </summary>
         /// <value>Available RAM (in Bytes).</value>
         [DataMember(Name="memory", EmitDefaultValue=false)]
-        public int? Memory { get; set; }
+        public long? Memory { get; set; }
 
         /// <summary>
         /// Running Operating System.
